@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "668995849223",
+    "project_id": "caress-70416",
+    "storage_bucket": "caress-70416.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668995849223:android:37d4b4c675699a4984aea2",
+        "android_client_info": {
+          "package_name": "com.example.caress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668995849223-3c11b0nnitn1fud35rj4viuauh0e4unm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk2eWD_I9BHn8MjhqpPvis9oqi_8LeqbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "668995849223-3c11b0nnitn1fud35rj4viuauh0e4unm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
