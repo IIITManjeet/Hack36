@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:caress/Assessment.dart';
 import 'package:caress/Helpline.dart';
+import 'package:caress/Prediction.dart';
 import 'package:caress/main.dart';
 import 'package:flutter_phone_direct_caller/flutter_phone_direct_caller.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -36,6 +37,7 @@ class UserData extends StatefulWidget {
 
 bool run = true;
 int? _steps = 0;
+int? stepx = 0;
 String? _heart_rate;
 HealthValue? _bp_d;
 HealthValue? _bp_s;
@@ -75,7 +77,12 @@ class _UserDataState extends State<UserData> {
 
     // get the number of steps for today
     var midnight = DateTime(now.year, now.month, now.day);
+    var xyz = DateTime(now.year, now.month, now.day, now.hour - 1);
     _steps = await health.getTotalStepsInInterval(midnight, now);
+    stepx = await health.getTotalStepsInInterval(xyz, now);
+    if (stepx == null) {
+      stepx = 0;
+    }
 
     String? heartRate;
     HealthValue? bpd;
@@ -317,7 +324,7 @@ class _UserDataState extends State<UserData> {
         c = 1;
       }
     });
-    Timer.periodic(Duration(minutes: 2), (timer) {
+    Timer.periodic(Duration(minutes: 5), (timer) {
       if (c == 1) {
         sendEmail(
           patientInfo.name!,
@@ -588,6 +595,34 @@ class _MenuState extends State<Menu> {
                   Navigator.pop(context);
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Helpline()));
+                },
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              InkWell(
+                child: Row(
+                  children: [
+                    Icon(
+                      FontAwesomeIcons.stethoscope,
+                      color: Colors.black,
+                      size: 20,
+                    ),
+                    SizedBox(width: 15),
+                    Text(
+                      'Smart Prediction',
+                      textScaleFactor: 1,
+                      style: TextStyle(fontSize: 25, color: color),
+                    ),
+                  ],
+                ),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              Prediction(_bodytemp!, stepx!)));
                 },
               ),
               SizedBox(height: height / 2),

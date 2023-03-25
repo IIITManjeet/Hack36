@@ -197,7 +197,7 @@ class _QuestionState extends State<Question> {
                             over = true;
                             String risk = ans == widget.qno
                                 ? "High"
-                                : ans >= widget.qno
+                                : ans >= widget.qno / 2
                                     ? "Moderate"
                                     : "Low";
                             print(patientInfo.specialistContact);
