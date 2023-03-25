@@ -77,7 +77,7 @@ class _UserDataState extends State<UserData> {
 
     // get the number of steps for today
     var midnight = DateTime(now.year, now.month, now.day);
-    var xyz = DateTime(now.year, now.month, now.day, now.hour, now.minute - 30);
+    var xyz = DateTime(now.year, now.month, now.day, now.hour, now.minute - 10);
     _steps = await health.getTotalStepsInInterval(midnight, now);
     stepx = await health.getTotalStepsInInterval(xyz, now);
     if (stepx == null) {

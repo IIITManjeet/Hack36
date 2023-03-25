@@ -70,7 +70,7 @@ class _PredictionState extends State<Prediction> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TextsField("Temperature (centigrade)", '', temperature, false),
-              TextsField("Step count (last 30 min)", '', step_cnt, false),
+              TextsField("Step count (last 10 min)", '', step_cnt, false),
               SizedBox(height: 20),
               Container(
                 height: 250,
