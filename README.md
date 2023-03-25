@@ -5,13 +5,13 @@
 <a href="https://hack36.com"> <img src="https://i.postimg.cc/RFFWF4vg/built-at-hack.jpg" height=24px> </a>
 
 ## Introduction:
-  Brief description of the project
+  As we all know, the health status of many is getting worst due to work stress and anxiety. Depression has become the biggest problem for people. Most of the youth responsible for the growth of a country are crippled in the chains of depression and anxiety, thus slowing down developmental activities. Sadly, the problem is suffered by many yet not discussed openly. So here we the team "Ideavengers" bring a caretaker "CARESS" for all of them who suffer from the same but hesitate to tell.
   
 ## Demo Video Link:
-  <a href="">Video Link</a>
+  <a href="https://youtu.be/bY5PYbtST8I">Video Link</a>
   
 ## Presentation Link:
-  <a href=""> PPT link here </a>
+  <a href="https://docs.google.com/presentation/d/1lsCcY13nABYehES-XKVbDkrTb3gBQ8MC/edit?usp=drivesdk&ouid=111122854190715549277&rtpof=true&sd=true"> PPT link here </a>
   
   
 ## Table of Contents:
@@ -20,10 +20,11 @@
   1) Flutter
   2) Dart
   3) Firebase
-  4) Flask REST API
-  5) Google Fit
+  4) Flask API
+  5) Google Fit API
   6) NewsAPI
   7) scikit-learn
+  8) Pandas
   
 
 ## Contributors:
