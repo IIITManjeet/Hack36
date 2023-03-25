@@ -1,9 +1,43 @@
+<h1 align="center">Hack36</h1>
+<p align="center">
+</p>
+
+<a href="https://hack36.com"> <img src="https://i.postimg.cc/RFFWF4vg/built-at-hack.jpg" height=24px> </a>
+
+## Introduction:
+  Brief description of the project
+  
+## Demo Video Link:
+  <a href="">Video Link</a>
+  
+## Presentation Link:
+  <a href=""> PPT link here </a>
+  
+  
+## Table of Contents:
+
+## Technology Stack:
+  1) Flutter
+  2) Dart
+  3) Firebase
+  4) Flask REST API
+  5) Google Fit
+  6) NewsAPI
+  7) scikit-learn
+  
+
+## Contributors:
+
+Team Name: Ideavengers
+
+* [Pranjal Dubey](https://github.com/dubey2709)
+* [Manjeet Pathak](https://github.com/IIITManjeet)
+* [Vinay Kumar](https://github.com/vink08)
+
 # Caress
 ## Theme - Mental Health
 
-## Tech Stack
 
-Flutter, Dart, Firebase, Flask REST API, Google Fit, NewsAPI, scikit-learn.
 
 
 ### Note - This app is currently in test mode and only users allowed by the admin who have a google account can use the app properly. The two possible publishing modes of the app are given below<br>
