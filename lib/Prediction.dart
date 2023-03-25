@@ -25,7 +25,7 @@ class _PredictionState extends State<Prediction> {
   int? z;
   Future<int> MLdata(double a, int b) async {
     final response = await http.post(
-      Uri.parse('https://stresspridiction.onrender.com/predict'),
+      Uri.parse('https://stressdetectorhack36.onrender.com/predict'),
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
@@ -38,7 +38,7 @@ class _PredictionState extends State<Prediction> {
       var x = jsonDecode(response.body);
       return x['prediction'][0];
     } else {
-      throw Exception('Failed to create album.');
+      throw Exception('Failed to fetch ML Data.');
     }
   }
 
