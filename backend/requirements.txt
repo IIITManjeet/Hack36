@@ -1,0 +1,6 @@
+Flask
+pandas
+scikit_learn
+tensorflow
+tensorflow_intel
+Gunicorn
