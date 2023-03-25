@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:caress/HomeScreen.dart';
 import 'package:caress/IntroScreen.dart';
 import 'package:caress/WelcomeScreen.dart';
@@ -49,9 +51,9 @@ class _AccessState extends State<Access> {
     sharedPreferences = await SharedPreferences.getInstance();
 
     try {
-      if (sharedPreferences.getString("caress") != null) {
+      if (sharedPreferences.getString("caress101") != null) {
         setState(() {
-          patientInfo.email = sharedPreferences.getString("caress")!;
+          patientInfo.email = sharedPreferences.getString("caress101")!;
           userAvailable = true;
         });
       }
@@ -205,7 +207,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       email: email, password: password);
                               sharedPreferences =
                                   await SharedPreferences.getInstance();
-                              sharedPreferences.setString("caress", email);
+                              sharedPreferences.setString("caress101", email);
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(

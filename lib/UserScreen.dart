@@ -370,7 +370,7 @@ class _UserDataState extends State<UserData> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Hey!! ${patientInfo.name}, Welcome to your Caress',
+                          'Hey!! ${patientInfo.name}, Welcome to Caress',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               fontWeight: FontWeight.bold,

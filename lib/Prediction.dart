@@ -86,10 +86,10 @@ class _PredictionState extends State<Prediction> {
                                 ? 0.6
                                 : 0.9,
                         center: z == 0
-                            ? Text('Low probability')
+                            ? Text('Low Stress')
                             : z == 1
-                                ? Text('Moderate probability')
-                                : Text('High probability'),
+                                ? Text('Normal Stress')
+                                : Text('High Stress'),
                         circularStrokeCap: CircularStrokeCap.round,
                         progressColor: z == 0
                             ? Colors.green
