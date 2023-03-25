@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-        home: Intro());
+        home: Access());
   }
 }
 
@@ -49,9 +49,9 @@ class _AccessState extends State<Access> {
     sharedPreferences = await SharedPreferences.getInstance();
 
     try {
-      if (sharedPreferences.getString("patient100") != null) {
+      if (sharedPreferences.getString("caress") != null) {
         setState(() {
-          patientInfo.email = sharedPreferences.getString("patient100")!;
+          patientInfo.email = sharedPreferences.getString("caress")!;
           userAvailable = true;
         });
       }
@@ -64,7 +64,7 @@ class _AccessState extends State<Access> {
 
   @override
   Widget build(BuildContext context) {
-    return userAvailable ? Homescreen() : LoginScreen();
+    return userAvailable ? Homescreen() : Intro();
   }
 }
 
@@ -205,7 +205,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       email: email, password: password);
                               sharedPreferences =
                                   await SharedPreferences.getInstance();
-                              sharedPreferences.setString("patient100", email);
+                              sharedPreferences.setString("caress", email);
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(

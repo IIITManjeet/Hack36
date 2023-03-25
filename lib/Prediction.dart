@@ -23,7 +23,7 @@ class _PredictionState extends State<Prediction> {
   TextEditingController step_cnt = TextEditingController();
 
   int? z;
-  Future<int> createAlbum(double a, int b) async {
+  Future<int> MLdata(double a, int b) async {
     final response = await http.post(
       Uri.parse('https://stresspridiction.onrender.com/predict'),
       headers: <String, String>{
@@ -70,7 +70,7 @@ class _PredictionState extends State<Prediction> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               TextsField("Temperature (centigrade)", '', temperature, false),
-              TextsField("Step count (last hour)", '', step_cnt, false),
+              TextsField("Step count (last 30 min)", '', step_cnt, false),
               SizedBox(height: 20),
               Container(
                 height: 250,
@@ -117,7 +117,7 @@ class _PredictionState extends State<Prediction> {
                       minWidth: width / 1.2,
                       height: height / 11.5,
                       onPressed: () async {
-                        int x = await createAlbum(
+                        int x = await MLdata(
                             (double.parse(widget.temp.toString()) * 9 / 5 + 32),
                             widget.steps);
                         setState(() {
